@@ -1,4 +1,4 @@
-type GridUI = string | null | undefined
+type GridUID = string | null | undefined
 
 describe('Example - Grid Menu', () => {
   const fullTitles = ['Title', 'Duration', '% Complete', 'Start', 'Finish', 'Effort Driven'];
@@ -29,7 +29,7 @@ describe('Example - Grid Menu', () => {
   });
 
   it('should open the Grid Menu on 1st Grid and expect all Columns to be checked', () => {
-    let gridUid: GridUI = '';
+    let gridUid: GridUID = '';
     cy.get('#myGrid01')
       .find('button.slick-gridmenu-button')
       .click({ force: true });
@@ -77,7 +77,7 @@ describe('Example - Grid Menu', () => {
   });
 
   it('should open the Grid Menu off 2nd Grid and expect all Columns to still be all checked', () => {
-    let gridUid: GridUI = '';
+    let gridUid: GridUID = '';
     cy.get('#myGrid02')
       .find('button.slick-gridmenu-button')
       .click({ force: true });
@@ -207,7 +207,7 @@ describe('Example - Grid Menu', () => {
   });
 
   it('should open the Grid Menu on 2nd Grid and expect all Columns to be checked', () => {
-    let gridUid: GridUI = '';
+    let gridUid: GridUID = '';
     cy.get('#myGrid02')
       .find('button.slick-gridmenu-button')
       .click({ force: true });
@@ -243,7 +243,7 @@ describe('Example - Grid Menu', () => {
   });
 
   it('should open the Grid Menu on 1st Grid and also expect to only have 4 columns checked (visible)', () => {
-    let gridUid: GridUI = '';
+    let gridUid: GridUID = '';
     cy.get('#myGrid01')
       .find('button.slick-gridmenu-button')
       .click({ force: true });
